@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
-   <link rel="stylesheet" href="main.css">
-        
+    <link rel="stylesheet" href="main.css">
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css " rel="stylesheet">
+    <style>
+        .splide__slide img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,8 +45,7 @@
         <div class='flex flex-wrap items-center justify-between px-1 py-3 gap-4 w-full'>
             <div class='flex items-center gap-4 px-10'>
                 <a href="javascript:void(0)">
-                    <img src="../img/logo1.png" alt="logo"
-                        class='w-20 h-20' />
+                    <img src="../img/logo1.png" alt="logo" class='w-20 h-20' />
                 </a>
                 <div class="h-20 border-l border-gray-300"></div> <!-- Vertical line -->
                 <div class="flex flex-col">
@@ -65,8 +70,7 @@
                 <ul
                     class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                     <li class='mb-6 hidden max-lg:block'>
-                        <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo"
-                                class='w-36' />
+                        <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo" class='w-36' />
                         </a>
                     </li>
                     <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
@@ -198,8 +202,7 @@
         <div class='flex flex-wrap items-center justify-between px-10 py-2 gap-4 w-full'>
             <div class='flex items-center gap-4 px-10'>
                 <a href="javascript:void(0)">
-                    <img src="../img/logo1.png" alt="logo"
-                        class='w-20 h-20' />
+                    <img src="../img/logo1.png" alt="logo" class='w-20 h-20' />
                 </a>
                 <div class="h-20 border-l border-gray-300"></div> <!-- Vertical line -->
                 <div class="flex flex-col text-white">
@@ -224,8 +227,7 @@
                 <ul
                     class='lg:flex lg:gap-x-10 max-lg:space-y-3 text-white max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
                     <li class='mb-6 hidden max-lg:block'>
-                        <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo"
-                                class='w-36' />
+                        <a href="javascript:void(0)"><img src="../img/logo1.png" alt="logo" class='w-36' />
                         </a>
                     </li>
                     <li class='max-lg:border-b max-lg:py-3'><a href='javascript:void(0)'
@@ -354,8 +356,7 @@
     </div>
     <section>
         <div class="relative overflow-hidden h-1/2 md:h-5/6">
-            <video src="../img/video.mp4" autoplay loop muted
-                class="w-full h-full object-cover">
+            <video src="../img/video.mp4" autoplay loop muted class="w-full h-full object-cover">
             </video>
         </div>
     </section>
@@ -364,7 +365,8 @@
         <h1 class="uppercase text-black text-center font-bold text-2xl"><span class="text-blue-800">Introduction</span>
         </h1>
         <div class="mt-7">
-            <p class="text-center md:text-justify mt-0 md:mt-10">It is the aim of Samriddhi School to provide K-12 education
+            <p class="text-center md:text-justify mt-0 md:mt-10">It is the aim of Samriddhi School to provide K-12
+                education
                 that every student deserves. We, at Samriddhi School, appreciate diversity and realize that each student
                 is
                 different and should be treated as an unique individual. Our constant endeavor is to help each student
@@ -386,7 +388,7 @@
         </div>
     </div>
 
-    <div class="mx-auto max-w-7xl p-6 md:pl-[7.5rem] md:pr-[7.5rem] mb-10 mt-4">
+    <div class="mx-auto max-w-7xl p-6 md:pl-[7.5rem] md:pr-[7.5rem]  mt-4">
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4  text-center borde">
             <div class="mx-auto max-w-xs flex-col flex shadow-lg shadow-neutral-300 py-3 px-4 mt-5 md:w-[19rem]">
                 <dd class="order-first text-2xl font-semibold tracking-tight ">
@@ -416,9 +418,26 @@
             </div>
         </div>
     </div>
+    <div class="mt-16">
+<h1 class="text-4xl font-bold text-center">Browse Our Course Category</h1>
+    <div id="image-slider" class="splide mt-[14rem] ">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <img src="../img/slider1.webp">
+                </li>
+                <li class="splide__slide">
+                    <img src="../img/slider2.webp">
+                </li>
+                <li class="splide__slide">
+                    <img src="../img/slider3.webp">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-
-
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js "></script>
     <script>
         const mainNavbar = document.getElementById('mainNavbar');
         const stickyNavbar = document.getElementById('stickyNavbar');
@@ -447,15 +466,14 @@
         toggleOpen.addEventListener('click', handleClick);
         toggleClose.addEventListener('click', handleClick);
 
-        document.addEventListener('DOMContentLoaded', function () {
-            new Splide('#thumbnail-carousel', {
-                fixedWidth: 100,
-                fixedHeight: 60,
-                gap: 10,
-                rewind: true,
-                pagination: false,
-            }).mount();
+       
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            autoplay: true,
         });
+
+        splide.mount();
     </script>
 </body>
 
